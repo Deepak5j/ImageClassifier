@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Image Classifier</title>
 	<meta charset="utf-8">
-    <!-- Load the latest version of TensorFlow.js -->
-    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
-    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
-    <!-- bootstrap 4 CSS-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Load the latest version of TensorFlow.js -->
+	<script src="https://unpkg.com/@tensorflow/tfjs"></script>
+	<script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+	<!-- custom classifiers-->
+	<script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+	<!-- bootstrap 4 CSS-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -18,20 +21,27 @@
    			<a class="btn text-success btn-outline-light btn-sm m-2" href="./cust.html">Custom Image Classifier </a>
 		</nav>
 	</header>	
-	
+
 	<section class="container text-center">
-	    <input class="m-2" type="file" onchange="previewFile()"><br>
-		<img class="m-2" id="img" crossOrigin src="" height="200" width="250" alt=" ">
-	    <div class="m-2 border-primary border " id="console"></div>	
+		<video class="m-2" autoplay playsinline muted id="webcam" width="224" height="224">	</video>
+
+		<div>
+			<button class="btn btn-sm btn-success m-2" id="class-a">Add A</button>
+			<button class="btn btn-sm btn-success m-2" id="class-b">Add B</button>
+			<button class="btn btn-sm btn-success m-2" id="class-c">Add C</button>
+			<button class="btn btn-sm btn-success m-2" id="class-d">Add D</button>			
+		</div>
+		<div class="m-2 border-primary border " id="console"></div>
 	</section>
-    
+
 	<footer class="bg-dark footer fixed-bottom text-center">
 		<div>
 			<a  class="btn text-danger btn-outline-light btn-sm m-2" href="https://github.com/deepak5j">Github</a>
 		</div>
 	</footer>
 
-    <!-- Load index.js after the content of the page -->
-    <script src="index.js"></script>
+    <!-- Load index.js after the content of the page -->	
+	<script src="cust.js"></script>
+
 </body>
 </html>
