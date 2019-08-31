@@ -12,8 +12,7 @@ async function app() {
   while (true) {
     const result = await net.classify(webcamElement);
 
-    document.getElementById('console').innerText = `
-      prediction: ${result[0].className}
+    document.getElementById('console').innerText = `prediction: ${result[0].className}
       probability: ${result[0].probability}
     `;
 
