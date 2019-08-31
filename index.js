@@ -1,4 +1,4 @@
-const webcamElement = document.getElementById('webcam');
+const webcamElement = document.getElementById('webcam'); // webcam
 
 let net;
 
